@@ -1,0 +1,244 @@
+<Pharos>
+    <LineItems>
+        <Item ID="1">
+            <Amount>60</Amount>
+            <Sign>-</Sign>
+            <Currency>EUR</Currency>
+            <Account></Account>
+            <Comment>Betaling Trans : 16/05/2018 18:07 - E5-MODE W01 SINT 9051 SINT-DENIJ</Comment>
+            <Date>16.5.2018</Date>
+        </Item>
+        <Item ID="2">
+            <Amount>850</Amount>
+            <Sign>-</Sign>
+            <Currency>EUR</Currency>
+            <Account>BE19651155918412</Account>
+            <Comment>Overschrijving naar BE19651155918412 Gemeenschappelijk   Maandelijkse storting</Comment>
+            <Date>14.5.2018</Date>
+        </Item>
+        <Item ID="3">
+            <Amount>0.40000000000000002</Amount>
+            <Sign>+</Sign>
+            <Currency>EUR</Currency>
+            <Account></Account>
+            <Comment>5 eurocent/verrichting - van 01/04/2018 tot 30/04/2018</Comment>
+            <Date>2.5.2018</Date>
+        </Item>
+        <Item ID="4">
+            <Amount>571.39999999999998</Amount>
+            <Sign>-</Sign>
+            <Currency>EUR</Currency>
+            <Account>1809563</Account>
+            <Comment>VISA 1809563</Comment>
+            <Date>2.5.2018</Date>
+        </Item>
+        <Item ID="5">
+            <Amount>1500</Amount>
+            <Sign>-</Sign>
+            <Currency>EUR</Currency>
+            <Account>7306590</Account>
+            <Comment>Overschrijving naar 7306590 Staes Jannick   Permanent order for KeyPlan 7306590 (Algemeen</Comment>
+            <Date>1.5.2018</Date>
+        </Item>
+        <Item ID="6">
+            <Amount>4403.5200000000004</Amount>
+            <Sign>+</Sign>
+            <Currency>EUR</Currency>
+            <Account>BE15290049548530</Account>
+            <Comment>Credit Transfer BE15290049548530 OLEON NV ASSENEDESTRAAT 2 9940 ERTVELDE /A/ 1GO0067-02-0016075</Comment>
+            <Date>23.4.2018</Date>
+        </Item>
+        <Item ID="7">
+            <Amount>34.299999999999997</Amount>
+            <Sign>-</Sign>
+            <Currency>EUR</Currency>
+            <Account>BE47097249007080</Account>
+            <Comment>Overschrijving BE47097249007080 GKCCBEBB APB Gezinnen    BE +++221/8266/96255</Comment>
+            <Date>22.4.2018</Date>
+        </Item>
+        <Item ID="8">
+            <Amount>850</Amount>
+            <Sign>-</Sign>
+            <Currency>EUR</Currency>
+            <Account>BE19651155918412</Account>
+            <Comment>Overschrijving naar BE19651155918412 Gemeenschappelijk   Maandelijkse storting</Comment>
+            <Date>14.4.2018</Date>
+        </Item>
+        <Item ID="9">
+            <Amount>53.93</Amount>
+            <Sign>+</Sign>
+            <Currency>EUR</Currency>
+            <Account>651-1559184-12</Account>
+            <Comment>Overschrijving van 651-1559184-12 Staes - Crapé Henri Dunantlaan 10B2 9000 Gent lego bricklink</Comment>
+            <Date>10.4.2018</Date>
+        </Item>
+        <Item ID="10">
+            <Amount>21.600000000000001</Amount>
+            <Sign>-</Sign>
+            <Currency>EUR</Currency>
+            <Account>BE83390038301315</Account>
+            <Comment>Overschrijving BE83390038301315 BBRUBEBB Eric Lego    BE BrickLink Order  9278838</Comment>
+            <Date>10.4.2018</Date>
+        </Item>
+        <Item ID="11">
+            <Amount>32.329999999999998</Amount>
+            <Sign>-</Sign>
+            <Currency>EUR</Currency>
+            <Account>BE07651160560466</Account>
+            <Comment>Overschrijving naar BE07651160560466 Jérôme LAURENT   BrickLink Order #9278845</Comment>
+            <Date>10.4.2018</Date>
+        </Item>
+        <Item ID="12">
+            <Amount>1000</Amount>
+            <Sign>-</Sign>
+            <Currency>EUR</Currency>
+            <Account>1559184</Account>
+            <Comment>Overschrijving naar 1559184 Gemeenschappelijk</Comment>
+            <Date>7.4.2018</Date>
+        </Item>
+        <Item ID="13">
+            <Amount>0.59999999999999998</Amount>
+            <Sign>+</Sign>
+            <Currency>EUR</Currency>
+            <Account></Account>
+            <Comment>5 eurocent/verrichting - van 01/03/2018 tot 31/03/2018</Comment>
+            <Date>3.4.2018</Date>
+        </Item>
+        <Item ID="14">
+            <Amount>21</Amount>
+            <Sign>-</Sign>
+            <Currency>EUR</Currency>
+            <Account>BE79780585920833</Account>
+            <Comment>Direct Debit (880718 051M44)CM-bijdr. T218 CM MIDDEN-VLAANDEREN BE79780585920833 MARTELAARSLAAN 17 BE</Comment>
+            <Date>6.4.2018</Date>
+        </Item>
+        <Item ID="15">
+            <Amount>26.059999999999999</Amount>
+            <Sign>-</Sign>
+            <Currency>EUR</Currency>
+            <Account></Account>
+            <Comment>Betaling Trans : 03/04/2018 18:34 - DELHAIZE WATERSP 9000 GENT</Comment>
+            <Date>3.4.2018</Date>
+        </Item>
+        <Item ID="16">
+            <Amount>20.82</Amount>
+            <Sign>-</Sign>
+            <Currency>EUR</Currency>
+            <Account></Account>
+            <Comment>Betaling Trans : 31/03/2018 14:14 - DELHAIZE WATERSP 9000 GENT</Comment>
+            <Date>31.3.2018</Date>
+        </Item>
+        <Item ID="17">
+            <Amount>775.70000000000005</Amount>
+            <Sign>-</Sign>
+            <Currency>EUR</Currency>
+            <Account>1809563</Account>
+            <Comment>VISA 1809563</Comment>
+            <Date>3.4.2018</Date>
+        </Item>
+        <Item ID="18">
+            <Amount>1500</Amount>
+            <Sign>-</Sign>
+            <Currency>EUR</Currency>
+            <Account>7306590</Account>
+            <Comment>Overschrijving naar 7306590 Staes Jannick   Permanent order for KeyPlan 7306590 (Algemeen</Comment>
+            <Date>1.4.2018</Date>
+        </Item>
+        <Item ID="19">
+            <Amount>4022.1500000000001</Amount>
+            <Sign>+</Sign>
+            <Currency>EUR</Currency>
+            <Account>BE15290049548530</Account>
+            <Comment>Credit Transfer BE15290049548530 OLEON NV ASSENEDESTRAAT 2 9940 ERTVELDE /A/ 1GO0067-02-0016075</Comment>
+            <Date>28.3.2018</Date>
+        </Item>
+        <Item ID="20">
+            <Amount>85.290000000000006</Amount>
+            <Sign>+</Sign>
+            <Currency>EUR</Currency>
+            <Account>651-1559184-12</Account>
+            <Comment>Overschrijving van 651-1559184-12 Staes - Crapé Henri Dunantlaan 10B2 9000 Gent etentje Bea en Jeroen</Comment>
+            <Date>20.3.2018</Date>
+        </Item>
+        <Item ID="21">
+            <Amount>85.290000000000006</Amount>
+            <Sign>-</Sign>
+            <Currency>EUR</Currency>
+            <Account>BE07063585747366</Account>
+            <Comment>Overschrijving BE07063585747366 GKCCBEBB Beatrijs en Jeroen    BE etentje</Comment>
+            <Date>20.3.2018</Date>
+        </Item>
+        <Item ID="22">
+            <Amount>90</Amount>
+            <Sign>+</Sign>
+            <Currency>EUR</Currency>
+            <Account>651-1559184-12</Account>
+            <Comment>Overschrijving van 651-1559184-12 Staes - Crapé Henri Dunantlaan 10B2 9000 Gent eerste dienstencheques</Comment>
+            <Date>14.3.2018</Date>
+        </Item>
+        <Item ID="23">
+            <Amount>850</Amount>
+            <Sign>-</Sign>
+            <Currency>EUR</Currency>
+            <Account>BE19651155918412</Account>
+            <Comment>Overschrijving naar BE19651155918412 Gemeenschappelijk   Maandelijkse storting</Comment>
+            <Date>14.3.2018</Date>
+        </Item>
+        <Item ID="24">
+            <Amount>600</Amount>
+            <Sign>-</Sign>
+            <Currency>EUR</Currency>
+            <Account></Account>
+            <Comment>Betaling   10/03/2018 17:04 LOKEREN</Comment>
+            <Date>12.3.2018</Date>
+        </Item>
+        <Item ID="25">
+            <Amount>47.5</Amount>
+            <Sign>-</Sign>
+            <Currency>EUR</Currency>
+            <Account></Account>
+            <Comment>Betaling   10/03/2018 14:26 Gent</Comment>
+            <Date>12.3.2018</Date>
+        </Item>
+        <Item ID="26">
+            <Amount>30</Amount>
+            <Sign>+</Sign>
+            <Currency>EUR</Currency>
+            <Account>BE19979655604312</Account>
+            <Comment>Credit Transfer BE19979655604312 ONNE BEEK 704 KORTRIJKSESTEENWEG 9000 GENT Afrekening skireis</Comment>
+            <Date>12.3.2018</Date>
+        </Item>
+        <Item ID="27">
+            <Amount>51</Amount>
+            <Sign>-</Sign>
+            <Currency>EUR</Currency>
+            <Account>BE72777594206316</Account>
+            <Comment>Overschrijving BE72777594206316 GKCCBEBB CM Zorgkas Vlaanderen    BE+++400/2114/49531</Comment>
+            <Date>11.3.2018</Date>
+        </Item>
+        <Item ID="28">
+            <Amount>150</Amount>
+            <Sign>+</Sign>
+            <Currency>EUR</Currency>
+            <Account>BE82778592215468</Account>
+            <Comment>Credit Transfer BE82778592215468 CRAPE LARA LEENSTRAAT              40 9870  ZULTE Schoenen</Comment>
+            <Date>6.3.2018</Date>
+        </Item>
+        <Item ID="29">
+            <Amount>651.00999999999999</Amount>
+            <Sign>-</Sign>
+            <Currency>EUR</Currency>
+            <Account>1809563</Account>
+            <Comment>VISA 1809563</Comment>
+            <Date>5.3.2018</Date>
+        </Item>
+        <Item ID="30">
+            <Amount>284</Amount>
+            <Sign>-</Sign>
+            <Currency>EUR</Currency>
+            <Account></Account>
+            <Comment>Betaling Trans : 03/03/2018 16:41 - KEVIN SCHOENEN &amp; 8790 WAREGEM</Comment>
+            <Date>3.3.2018</Date>
+        </Item>
+    </LineItems>
+</Pharos>
