@@ -50,3 +50,4 @@ Finances 0.3
 	Eerste GUI maken
 		Ofwel een windows desktop app -> via Qt
 Ofwel onmiddellijk proberen om een webapp te maken -> via Django -> hier wel Python leren (maar dat is sowieso goed! Besides, how hard can it be…)
+	-> change of plans, de GUI zou ik eerst doen. Lijkt me leuker en dan kan ik al eens iets tonen aan Lara :)
