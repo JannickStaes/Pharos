@@ -1,4 +1,4 @@
-# Pharos
+# Vin
 Your financial buddy
 	
 **V0.1**
