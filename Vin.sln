@@ -3,11 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29503.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Pharos", "Pharos\Pharos.vcxproj", "{71AA328A-828A-4439-A7DE-702FD36C752E}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Vin Library", "Pharos\Pharos.vcxproj", "{71AA328A-828A-4439-A7DE-702FD36C752E}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PharosTests", "PharosTests\PharosTests.vcxproj", "{F952DF93-9388-4986-9A3D-ADF3B25D57D0}"
-EndProject
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "polls", "PharosDjango\polls\polls.pyproj", "{B1A65795-49B2-4A1A-90E0-B0AEDD11E408}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Vin Library Tests", "PharosTests\PharosTests.vcxproj", "{F952DF93-9388-4986-9A3D-ADF3B25D57D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,12 +37,6 @@ Global
 		{F952DF93-9388-4986-9A3D-ADF3B25D57D0}.Release|x64.Build.0 = Release|x64
 		{F952DF93-9388-4986-9A3D-ADF3B25D57D0}.Release|x86.ActiveCfg = Release|Win32
 		{F952DF93-9388-4986-9A3D-ADF3B25D57D0}.Release|x86.Build.0 = Release|Win32
-		{B1A65795-49B2-4A1A-90E0-B0AEDD11E408}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B1A65795-49B2-4A1A-90E0-B0AEDD11E408}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{B1A65795-49B2-4A1A-90E0-B0AEDD11E408}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{B1A65795-49B2-4A1A-90E0-B0AEDD11E408}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B1A65795-49B2-4A1A-90E0-B0AEDD11E408}.Release|x64.ActiveCfg = Release|Any CPU
-		{B1A65795-49B2-4A1A-90E0-B0AEDD11E408}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
