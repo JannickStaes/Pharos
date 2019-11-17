@@ -16,13 +16,13 @@ using tinyxml2::XMLError;
 int main()
 {
 	//load existing XML Database
-	string xmldb = "C:\\Users\\staes\\Desktop\\Pharos\\TestDB.xml";
+	string xmldb = "C:\\Users\\staes\\Desktop\\Vin\\TestDB.xml";
 	XMLDatabase db(xmldb.c_str()); 
 	vector<LineItem> existing_items;
 	db.read_lineitems(existing_items);
 
 	//load new items from CSV
-	string csv = "C:\\Users\\staes\\Desktop\\Pharos\\New Keytrade Download.csv";
+	string csv = "C:\\Users\\staes\\Desktop\\Vin\\New Keytrade Download.csv";
 	TextImport import(csv.c_str());
 	vector<LineItem> new_items = import.get_imported_items();
 	sort(new_items.begin(), new_items.end(), compare_lineitems_by_date);
