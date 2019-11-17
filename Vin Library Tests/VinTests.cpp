@@ -1,7 +1,7 @@
 #include "CppUnitTest.h"
-#include "../Pharos/LineItem.h"
-#include "../Pharos/TextImport.h"
-#include "../Pharos/XMLDatabase.h"
+#include "../Vin Library/LineItem.h"
+#include "../Vin Library/TextImport.h"
+#include "../Vin Library/XMLDatabase.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 using std::string;

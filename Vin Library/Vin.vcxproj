@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{71AA328A-828A-4439-A7DE-702FD36C752E}</ProjectGuid>
+    <ProjectGuid>{6C9F1933-477F-42AA-BDF4-2D7D6423D928}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Pharos</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>

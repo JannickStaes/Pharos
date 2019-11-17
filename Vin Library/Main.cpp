@@ -32,8 +32,3 @@ int main()
 
 	return 1;
 }
-
-/*Current status: 
-fix IDs of new elements and all elements after it in "add_item_with_values" method
-New class to define account and comment contain rules. 
-*/

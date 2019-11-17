@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{F952DF93-9388-4986-9A3D-ADF3B25D57D0}</ProjectGuid>
+    <ProjectGuid>{CBB5C286-371D-4095-9453-E000F63DF8FF}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>PharosTests</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
@@ -116,8 +116,8 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>../Pharos/x64/Debug/;$(VCInstallDir)UnitTest\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>../Pharos/x64/Debug/LineItem.obj;../Pharos/x64/Debug/Date.obj;../Pharos/x64/Debug/TextImport.obj;../Pharos/x64/Debug/XMLDatabase.obj;../Pharos/x64/Debug/tinyxml2.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../Vin Library/x64/Debug/;$(VCInstallDir)UnitTest\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>../Vin Library/x64/Debug/LineItem.obj;../Vin Library/x64/Debug/Date.obj;../Vin Library/x64/Debug/TextImport.obj;../Vin Library/x64/Debug/XMLDatabase.obj;../Vin Library/x64/Debug/tinyxml2.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -159,12 +159,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="PharosTests.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Pharos\Pharos.vcxproj">
-      <Project>{71aa328a-828a-4439-a7de-702fd36c752e}</Project>
-    </ProjectReference>
+    <ClCompile Include="VinTests.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
