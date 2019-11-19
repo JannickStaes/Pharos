@@ -6,5 +6,8 @@
 <h1>Vin</h1>
 <a>Automated Personal Finance</a>
 
+<form action="{% url 'Transactions:manual_add' %}" method = "get">
+    <p><input type="submit" value="Add Transaction"></p>
+</form>
 </body>
 </html>

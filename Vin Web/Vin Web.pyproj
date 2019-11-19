@@ -55,6 +55,7 @@
     <Folder Include="Vin_Web\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="LineItems\templates\LineItems\detail.html" />
     <Content Include="LineItems\templates\LineItems\index.html" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
