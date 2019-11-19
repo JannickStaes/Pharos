@@ -1,6 +1,6 @@
 from django.db import models
 
-class LineItem(models.Model):
+class Transaction(models.Model):
     amount = models.FloatField()
     sign = models.CharField( max_length = 1)
     currency = models.CharField (max_length = 3)
