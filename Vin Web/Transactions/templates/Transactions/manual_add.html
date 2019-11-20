@@ -1,0 +1,22 @@
+﻿<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>So you want to add a transaction...</h1>
+
+    <form action = "{% url 'Transactions:manual_add' %}" method = "POST">
+        {% csrf_token %}
+        Amount: <input type="text" name = "Amount">
+        <select name="Currency"> 
+            <option value="EUR">EUR</option>
+        </select><br>
+        Date: <input type="date" name="Date"><br>
+        From: <input type="text" name="Account"><br>
+        Comment: <input type="text" name="Comment"><br><br>
+        <input type = "submit" value = "Submit">
+    </form>
+
+</body>
+</html>

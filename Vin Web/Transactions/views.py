@@ -13,4 +13,11 @@ def detail(request, transaction_id):
     return render(request, 'Transactions/detail.html', context)
 
 def add_manual(request):
-    return HttpResponse('You can add a new transaction here.')
+    if request.method == 'POST':
+        t = Transaction(request.POST['Amount'],
+                        '-',
+                        request.POST['Currency'],
+                        request.POST['Date'],
+                        request.POST['Account'],
+                        request.POST['Comment'])
+    return render(request, 'Transactions/manual_add.html')
