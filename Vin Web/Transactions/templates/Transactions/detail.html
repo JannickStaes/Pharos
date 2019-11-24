@@ -1,4 +1,5 @@
-﻿<html>
+﻿<!doctype html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <title></title>
@@ -14,5 +15,9 @@
         <p>From: {{ transaction.account }} </p>
     {% endif %}
     <p>Comment: {{ transaction.comment }}</p>
+
+    <form action="{% url 'Transactions:list' %}" method="GET">
+        <p><input type = "submit" value = "Back"></p>
+    </form>
 </body>
 </html>

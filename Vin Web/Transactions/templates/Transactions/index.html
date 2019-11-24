@@ -1,13 +1,25 @@
-<html>
-<head><title></title></head>
+<!doctype html>
+<html lang="en">
+<head>
+    <title></title>
+    <style>
+        form {
+            display: inline;   
+        }
+    </style>
+</head>
 
 <body>
 
 <h1>Vin</h1>
-<a>Automated Personal Finance</a>
+<h2>Automated Personal Finance</h2>
 
 <form action="{% url 'Transactions:manual_add' %}" method = "get">
-    <p><input type="submit" value="Add Transaction"></p>
+    <input type="submit" value="Add Transaction">
 </form>
+<form action="{% url 'Transactions:list' %}" method = "get">
+    <input type="submit" value="History">
+</form>
+
 </body>
 </html>

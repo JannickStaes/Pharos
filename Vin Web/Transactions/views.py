@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404
+from django.urls import reverse
 
 from .models import Transaction
 
@@ -14,10 +15,19 @@ def detail(request, transaction_id):
 
 def add_manual(request):
     if request.method == 'POST':
-        t = Transaction(request.POST['Amount'],
-                        '-',
-                        request.POST['Currency'],
-                        request.POST['Date'],
-                        request.POST['Account'],
-                        request.POST['Comment'])
+        t = Transaction(amount = request.POST['Amount'],
+                        sign = '-',
+                        currency = request.POST['Currency'],
+                        date = request.POST['Date'],
+                        account = request.POST['Account'],
+                        comment = request.POST['Comment'])
+        t.save()
+        return HttpResponseRedirect(reverse('Transactions:manual_add'))
     return render(request, 'Transactions/manual_add.html')
+
+def list(request):
+    transactions = Transaction.objects.all()
+    context = {
+        'transactions': transactions
+    }
+    return render(request, 'Transactions/list.html', context)

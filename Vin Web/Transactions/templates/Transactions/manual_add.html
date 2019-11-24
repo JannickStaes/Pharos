@@ -1,7 +1,13 @@
-﻿<html>
+﻿<!doctype html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <style>
+        form {
+            display: inline;   
+        }
+    </style>
 </head>
 <body>
     <h1>So you want to add a transaction...</h1>
@@ -16,6 +22,9 @@
         From: <input type="text" name="Account"><br>
         Comment: <input type="text" name="Comment"><br><br>
         <input type = "submit" value = "Submit">
+    </form>
+    <form action="{% url 'Transactions:index' %}" method="GET">
+        <input type = "submit" value = "Back">
     </form>
 
 </body>

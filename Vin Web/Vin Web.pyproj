@@ -57,6 +57,7 @@
   <ItemGroup>
     <Content Include="Transactions\templates\Transactions\detail.html" />
     <Content Include="Transactions\templates\Transactions\index.html" />
+    <Content Include="Transactions\templates\Transactions\list.html" />
     <Content Include="Transactions\templates\Transactions\manual_add.html" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
