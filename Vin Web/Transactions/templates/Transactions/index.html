@@ -1,25 +1,34 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title></title>
-    <style>
-        form {
-            display: inline;   
-        }
-    </style>
+    <title>Vin</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Transactions/bulma.css' %}">
+    <link rel="stylesheet" href="{% static 'Transactions/basic.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Martel&display=swap"> 
+
 </head>
 
 <body>
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="{% url 'Transactions:index' %}">Vin</a>
+        </div>
+    </nav>
 
-<h1>Vin</h1>
-<h2>Automated Personal Finance</h2>
+    <h1>Vin</h1>
+    <h2>Automated Personal Finance</h2>
 
-<form action="{% url 'Transactions:manual_add' %}" method = "get">
-    <input type="submit" value="Add Transaction">
-</form>
-<form action="{% url 'Transactions:list' %}" method = "get">
-    <input type="submit" value="History">
-</form>
+    <form action="{% url 'Transactions:manual_add' %}" method = "get">
+        <input class="button is-light" type="submit" value="Add Transaction">
+    </form>
+    <form action="{% url 'Transactions:list' %}" method = "get">
+        <input class="button is-light" type="submit" value="History">
+    </form>
 
 </body>
 </html>
