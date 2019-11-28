@@ -52,6 +52,7 @@
     <Folder Include="Transactions\migrations\" />
     <Folder Include="Transactions\static\" />
     <Folder Include="Transactions\static\Transactions\" />
+    <Folder Include="Transactions\static\Transactions\images\" />
     <Folder Include="Transactions\templates\" />
     <Folder Include="Transactions\templates\Transactions\" />
     <Folder Include="Vin_Web\" />

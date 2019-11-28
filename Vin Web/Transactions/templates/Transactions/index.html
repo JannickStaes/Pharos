@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
     <title>Vin</title>
@@ -9,26 +9,67 @@
     {% load static %}
     <link rel="stylesheet" href="{% static 'Transactions/bulma.css' %}">
     <link rel="stylesheet" href="{% static 'Transactions/basic.css' %}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Martel&display=swap"> 
+
 
 </head>
 
-<body>
-    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+<body class="has-navbar-fixed-top">
+    <nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar-item" href="{% url 'Transactions:index' %}">Vin</a>
+            <a class="navbar-item" href="{% url 'Transactions:index' %}">
+                <img src="{% static 'Transactions/images/vin icon.png' %}">
+                <h2 style="margin-left:2px">Vin</h2>
+            </a>
+        </div>
+
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item">
+                    Overview
+                </a>
+                <a class="navbar-item">
+                    Reports
+                </a>
+            </div>
+            <div class="navbar-end">
+                <div class="buttons">
+                    <a class="button is-primary">
+                    Sign Up
+                </a>
+                <a style="margin-right:10px" class="button is-light">
+                    Log In
+                </a>
+                </div>
+            </div>
         </div>
     </nav>
 
-    <h1>Vin</h1>
-    <h2>Automated Personal Finance</h2>
+    <section class="hero is-light is-bold is-large">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    Vin
+                </h1>
+                <h2>
+                    Automates your money
+                </h2>
+            </div>
+            <div class="container">
+                <form action="{% url 'Transactions:manual_add' %}" method = "get">
+                    <input class="button is-success" type="submit" value="Add Transaction">
+                </form>
+                <form action="{% url 'Transactions:list' %}" method = "get">
+                    <input class="button is-success" type="submit" value="History">
+                </form>
+            </div>
+        </div>
+    </section>
 
-    <form action="{% url 'Transactions:manual_add' %}" method = "get">
-        <input class="button is-light" type="submit" value="Add Transaction">
-    </form>
-    <form action="{% url 'Transactions:list' %}" method = "get">
-        <input class="button is-light" type="submit" value="History">
-    </form>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <strong>Vin</strong> by Jannick Staes.
+        </div>
+    </footer>
 
 </body>
 </html>

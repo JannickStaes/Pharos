@@ -1,6 +1,6 @@
 html {
-    font-family: "Martel", serif;
-    font-size: 10px;
+    font-size: 16px;
+    font-family: 'Segoe UI';
 }
 
 body {
@@ -11,16 +11,18 @@ h1 {
     font-size: 60px;
     text-align: center;
     color: midnightblue;
-    margin: 0;
-    text-shadow: 1px 1px 0px midnightblue;
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 20px;
     text-align: center;
 }
 
 form {
     margin: 20px;
     display: inline-block;
+}
+
+.navbar-item {
+    line-height: 3;
 }
