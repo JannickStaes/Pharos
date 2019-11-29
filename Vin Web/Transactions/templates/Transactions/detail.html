@@ -1,10 +1,6 @@
-﻿<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
+{% extends "Transactions/base.html" %}
+
+{% block content %}
     <h1>Transaction</h1>
 
     <p>Amount: {{ transaction.sign}} {{ transaction.amount }} {{ transaction.currency }}</p>
@@ -19,5 +15,5 @@
     <form action="{% url 'Transactions:list' %}" method="GET">
         <p><input type = "submit" value = "Back"></p>
     </form>
-</body>
-</html>
+{% endblock content %}
+

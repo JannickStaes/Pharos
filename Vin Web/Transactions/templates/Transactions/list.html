@@ -1,20 +1,6 @@
-﻿<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-    <style>
-        #transactions {
-            width: 50%
-        }
-        #transactions th {
-            text-align: left;
-        }
-    </style>
-</head>
-<body>
-    <h1>History</h1>
+{% extends "Transactions/base.html" %}
 
+{% block content %}
     <table id="transactions">
         <tr>
             <th>Amount</th>
@@ -35,6 +21,9 @@
     <form action="{% url 'Transactions:index' %}" method="GET">
         <p><input type = "submit" value = "Back"></p>
     </form>
+{% endblock content %}
 
-</body>
-</html>
+
+
+
+

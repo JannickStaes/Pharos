@@ -1,49 +1,6 @@
-﻿<!doctype html>
-<html lang="en">
-<head>
-    <title>Vin</title>
+{% extends "Transactions/base.html" %}
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'Transactions/bulma.css' %}">
-    <link rel="stylesheet" href="{% static 'Transactions/basic.css' %}">
-
-
-</head>
-
-<body class="has-navbar-fixed-top">
-    <nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="{% url 'Transactions:index' %}">
-                <img src="{% static 'Transactions/images/vin icon.png' %}">
-                <h2 style="margin-left:2px">Vin</h2>
-            </a>
-        </div>
-
-        <div class="navbar-menu">
-            <div class="navbar-start">
-                <a class="navbar-item">
-                    Overview
-                </a>
-                <a class="navbar-item">
-                    Reports
-                </a>
-            </div>
-            <div class="navbar-end">
-                <div class="buttons">
-                    <a class="button is-primary">
-                    Sign Up
-                </a>
-                <a style="margin-right:10px" class="button is-light">
-                    Log In
-                </a>
-                </div>
-            </div>
-        </div>
-    </nav>
-
+{% block content %}
     <section class="hero is-light is-bold is-large">
         <div class="hero-body">
             <div class="container">
@@ -64,12 +21,10 @@
             </div>
         </div>
     </section>
+{% endblock content %}
 
-    <footer class="footer">
-        <div class="content has-text-centered">
-            <strong>Vin</strong> by Jannick Staes.
-        </div>
-    </footer>
+   
 
-</body>
-</html>
+
+
+

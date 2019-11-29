@@ -1,31 +1,57 @@
-﻿<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-    <style>
-        form {
-            display: inline;   
-        }
-    </style>
-</head>
-<body>
-    <h1>So you want to add a transaction...</h1>
+{% extends "Transactions/base.html" %}
 
-    <form action = "{% url 'Transactions:manual_add' %}" method = "POST">
-        {% csrf_token %}
-        Amount: <input type="text" name = "Amount">
-        <select name="Currency"> 
-            <option value="EUR">EUR</option>
-        </select><br>
-        Date: <input type="date" name="Date"><br>
-        From: <input type="text" name="Account"><br>
-        Comment: <input type="text" name="Comment"><br><br>
-        <input type = "submit" value = "Submit">
-    </form>
-    <form action="{% url 'Transactions:index' %}" method="GET">
-        <input type = "submit" value = "Back">
-    </form>
+{% block content %}
+    <section class="section is-medium" style="width:25rem; margin-left:auto; margin-right: auto">
+        <form action = "{% url 'Transactions:manual_add' %}" method = "POST">
+            {% csrf_token %}
+            <label class="label">Amount</label>
+            <div class="field has-addons">
+                <p class="control">
+                    <span class="select">
+                        <select name="Currency">
+                            <option>€</option>
+                            <option>$</option>
+                            <option>£</option>
+                        </select> 
+                    </span>
+                </p>
+                <p class="control">
+                    <input class="input" type="text" placeholder="Amount" name="Amount">
+                </p>
+            </div>
+            
+            <div class="field">
+                <label class="label">Date</label>
+                <div class="control">
+                    <input class="input" type="date" name="Date">
+                </div>
+            </div>
 
-</body>
-</html>
+            <div class="field">
+                 <label class="label">From</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Delhaize" name="Account">
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Comment</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Lego" name="Comment">
+                </div>
+            </div>
+
+            <div class="field is-grouped">
+                <div class="control">
+                    <button class="button is-link" type = "submit">Submit</button>
+                </div>
+                <div class="control">
+                    <button class="button is-link" formaction="{% url 'Transactions:index' %}" formmethod="GET">Back</button>
+                </div>
+            </div>
+           
+        </form> 
+    </section>
+{% endblock content %}
+
+

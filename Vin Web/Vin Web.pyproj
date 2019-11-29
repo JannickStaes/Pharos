@@ -35,7 +35,6 @@
     <Compile Include="Transactions\apps.py" />
     <Compile Include="Transactions\migrations\__init__.py" />
     <Compile Include="Transactions\models.py" />
-    <Compile Include="Transactions\tests.py" />
     <Compile Include="Transactions\urls.py">
       <SubType>Code</SubType>
     </Compile>
@@ -64,6 +63,7 @@
     <Content Include="Transactions\templates\Transactions\index.html" />
     <Content Include="Transactions\templates\Transactions\list.html" />
     <Content Include="Transactions\templates\Transactions\manual_add.html" />
+    <Content Include="Transactions\templates\Transactions\base.html" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
   <!-- Specify pre- and post-build commands in the BeforeBuild and 
