@@ -2,6 +2,9 @@
 
 {% block content %}
     <section class="section is-medium" style="width:25rem; margin-left:auto; margin-right: auto">
+        <h1 class="title">
+            Add Transaction
+        </h1>
         <form action = "{% url 'Transactions:manual_add' %}" method = "POST">
             {% csrf_token %}
             <label class="label">Amount</label>

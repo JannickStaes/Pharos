@@ -1,14 +1,21 @@
 {% extends "Transactions/base.html" %}
 
 {% block content %}
-    <table id="transactions">
-        <tr>
-            <th>Amount</th>
-            <th>Date</th> 
-            <th>Counterpart</th>
-            <th>Comment</th>
-        </tr>
-        {% for transaction in transactions %}
+<section class="section is-medium">
+    <h1 class="title">
+        Transaction History
+    </h1>
+    <table id="transactions" class="table" style="margin-left:auto; margin-right: auto">
+        <thead>
+            <tr>
+                <th>Amount</th>
+                <th>Date</th> 
+                <th>Counterpart</th>
+                <th>Comment</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for transaction in transactions %}
             <tr>
                 <td> <a href="{% url 'Transactions:detail' transaction.id %}">{{transaction.sign}} {{ transaction.amount }} {{transaction.currency}}</a> </td>
                 <td> {{ transaction.date }}</td>
@@ -16,11 +23,18 @@
                 <td> {{ transaction.comment }}</td>
             </tr>
         {% endfor %}
+        </tbody>
     </table>
 
     <form action="{% url 'Transactions:index' %}" method="GET">
-        <p><input type = "submit" value = "Back"></p>
+        <button class="button is-link" type = "submit">Back</button>
     </form>
+</section>
+    
+        
+        
+
+    
 {% endblock content %}
 
 

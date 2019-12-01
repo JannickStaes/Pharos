@@ -1,7 +1,10 @@
 {% extends "Transactions/base.html" %}
 
 {% block content %}
-    <h1>Transaction</h1>
+<section class="section is-medium">
+    <h1 class="title">
+        Details
+    </h1>
 
     <p>Amount: {{ transaction.sign}} {{ transaction.amount }} {{ transaction.currency }}</p>
     <p>On: {{ transaction.date }}</p>
@@ -13,7 +16,8 @@
     <p>Comment: {{ transaction.comment }}</p>
 
     <form action="{% url 'Transactions:list' %}" method="GET">
-        <p><input type = "submit" value = "Back"></p>
+        <button class="button is-link" type = "submit">Back</button>
     </form>
+</section>
 {% endblock content %}
 
