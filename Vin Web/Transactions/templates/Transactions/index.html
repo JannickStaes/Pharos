@@ -15,6 +15,9 @@
                 <form action="{% url 'Transactions:manual_add' %}" method = "get">
                     <input class="button is-success" type="submit" value="Add Transaction">
                 </form>
+                <form action="{% url 'Transactions:upload' %}" method = "get">
+                    <input class="button is-success" type="submit" value="Upload From File">
+                </form>
                 <form action="{% url 'Transactions:list' %}" method = "get">
                     <input class="button is-success" type="submit" value="History">
                 </form>

@@ -9,7 +9,7 @@ using std::ifstream;
 using std::getline;
 
 void TextImportFile::open_file(string filepath, vector<string>& input_vector) {
-	ifstream input_file(filepath);
+	ifstream input_file(filepath.c_str());
 	string s;
 
 	//ignore first header line

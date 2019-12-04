@@ -5,6 +5,8 @@
     <RootNamespace>Vin Web</RootNamespace>
     <SuppressEnvironmentCreationPrompt>True</SuppressEnvironmentCreationPrompt>
     <TestFramework>Pytest</TestFramework>
+    <EnableNativeCodeDebugging>True</EnableNativeCodeDebugging>
+    <InterpreterId>Global|PythonCore|3.8</InterpreterId>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,11 +14,11 @@
     <ProjectGuid>ab837d6b-8af4-4d42-9bcd-97079b6cfb58</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
-    <StartupFile>manage.py</StartupFile>
+    <StartupFile>Transactions\testdebugging.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
-    <LaunchProvider>Django launcher</LaunchProvider>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
     <DjangoSettingsModule>Vin_Web.settings</DjangoSettingsModule>
     <WebBrowserUrl>http://localhost</WebBrowserUrl>
     <OutputPath>.</OutputPath>
@@ -35,6 +37,9 @@
     <Compile Include="Transactions\apps.py" />
     <Compile Include="Transactions\migrations\__init__.py" />
     <Compile Include="Transactions\models.py" />
+    <Compile Include="Transactions\testdebugging.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Transactions\urls.py">
       <SubType>Code</SubType>
     </Compile>
@@ -64,6 +69,17 @@
     <Content Include="Transactions\templates\Transactions\list.html" />
     <Content Include="Transactions\templates\Transactions\manual_add.html" />
     <Content Include="Transactions\templates\Transactions\base.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Vin Library\Vin.vcxproj">
+      <Name>Vin Library</Name>
+      <Project>{6c9f1933-477f-42aa-bdf4-2d7d6423d928}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.8" />
+    <InterpreterReference Include="Global|PythonCore|3.8-32" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
   <!-- Specify pre- and post-build commands in the BeforeBuild and 

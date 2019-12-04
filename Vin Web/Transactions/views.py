@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404
 from django.urls import reverse
+from VinLibrary import read_from_csv_keytrade
 
 from .models import Transaction
 
@@ -31,3 +32,8 @@ def list(request):
         'transactions': transactions
     }
     return render(request, 'Transactions/list.html', context)
+
+def read_from_csv(request):
+#   list_items = read_from_csv_keytrade('.../Vin Library/Keytrade Download.csv')
+
+    return render(request, 'Transactions/csv_upload.html')
