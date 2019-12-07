@@ -259,3 +259,6 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+
+#Jannick 07/12/2019: soluton configuration needs to be separate since python libraries are not always located in the same directory
+*.vcxproj
