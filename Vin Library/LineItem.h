@@ -11,7 +11,7 @@ class LineItem {
 	std::string comment;
 public:
 	//constructors
-	LineItem(): amount(0.0) {}
+	LineItem() {}
 	LineItem(double, char, std::string, Date, std::string, std::string);
 	bool operator==(const LineItem&) const;
 
