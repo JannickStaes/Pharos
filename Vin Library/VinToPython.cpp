@@ -4,7 +4,7 @@
 #include <iostream>
 
 PyObject* read_from_csv_keytrade(PyObject *self, PyObject* inputfile_location) {
-	//PyDateTime_IMPORT;
+	PyDateTime_IMPORT;
 	PyObject* str = PyUnicode_AsUTF8String(inputfile_location);
 	Py_DECREF(str);
 	const char* inputfile_c = PyBytes_AsString(str);
@@ -13,7 +13,7 @@ PyObject* read_from_csv_keytrade(PyObject *self, PyObject* inputfile_location) {
 	
 	PyObject* ret = PyList_New(0);
 
-	for (std::vector<LineItem>::const_iterator iter; iter != new_items.end(); iter++) {
+	for (std::vector<LineItem>::const_iterator iter = new_items.begin(); iter != new_items.end(); iter++) {
 		PyObject* list_item = PyDict_New();
 		PyDict_SetItem(list_item, PyBytes_FromString("Amount"), PyFloat_FromDouble(iter->get_amount()) );
 		std::string sign_str(1,iter->get_sign() );
@@ -28,8 +28,15 @@ PyObject* read_from_csv_keytrade(PyObject *self, PyObject* inputfile_location) {
 	return ret;
 }
 
+PyObject* return_int(PyObject *, PyObject* x) {
+	long i = PyLong_AsLong(x);
+	PyObject* ret = PyLong_FromLong(i);
+	return ret;
+}
+
 static PyMethodDef VinToPython_methods[] = {
 	{ "read_from_csv_keytrade", (PyCFunction)read_from_csv_keytrade, METH_O, nullptr },
+	{ "return_int", (PyCFunction)return_int, METH_O, nullptr },
 
 	// Terminate the array with an object containing nulls.
 	{ NULL, NULL, 0, NULL }
