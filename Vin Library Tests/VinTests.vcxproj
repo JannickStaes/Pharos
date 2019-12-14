@@ -118,7 +118,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>"../Vin Library/x64/Debug/";$(VCInstallDir)UnitTest\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>"../Vin Library/x64/Debug/LineItem.obj";"../Vin Library/x64/Debug/Date.obj";"../Vin Library/x64/Debug/TextImport.obj";"../Vin Library/x64/Debug/XMLDatabase.obj";"../Vin Library/x64/Debug/tinyxml2.obj";%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>../Vin Library/x64/Debug/LineItem.obj;"../Vin Library/x64/Debug/Date.obj";"../Vin Library/x64/Debug/TextImport.obj";"../Vin Library/x64/Debug/XMLDatabase.obj";"../Vin Library/x64/Debug/tinyxml2.obj";%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
