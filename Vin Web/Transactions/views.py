@@ -34,6 +34,14 @@ def list(request):
     return render(request, 'Transactions/list.html', context)
 
 def read_from_csv(request):
-#   list_items = read_from_csv_keytrade('.../Vin Library/Keytrade Download.csv')
+    list_items = read_from_csv_keytrade('.../Vin Library/Keytrade Download.csv')
+    for item in list_items:
+        t = Transaction(amount = item['Amount'],
+                        sign = item['Sign'],
+                        currency = item['Currency'],
+                        date = item['Date'],
+                        account = item['Account'],
+                        comment = item['Comment'])
+        t.save()
 
     return render(request, 'Transactions/csv_upload.html')

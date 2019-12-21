@@ -11,7 +11,7 @@ class LineItem {
 	std::string comment;
 public:
 	//constructors
-	LineItem() {}
+	LineItem(): amount(0.0), sign(0) {}
 	LineItem(double, char, std::string, Date, std::string, std::string);
 	bool operator==(const LineItem&) const;
 
@@ -22,6 +22,8 @@ public:
 	Date get_date() const { return date; }
 	std::string get_account() const { return account; }
 	std::string get_comment() const { return comment; }
+	
+	bool valid();
 };
 
 bool compare_lineitems_by_date(LineItem, LineItem);

@@ -42,7 +42,7 @@ bool TextImport::read_from_csv_keytrade(vector<string>& inputfile)
 {
 	for (vector<string>::size_type i = 0; i < inputfile.size(); i++) {
 		LineItem input_line = read_line_from_csv_keytrade(inputfile[i]);
-		if (input_line.get_amount() != 0.0) //only add non zero LineItems
+		if (input_line.valid()) //only add non zero LineItems
 			this->ImportedItems.push_back(input_line);
 	}
 

@@ -22,21 +22,23 @@ PyObject* read_from_csv_keytrade(PyObject *self, PyObject* inputfile_location) {
 		PyDict_SetItem(list_item, PyBytes_FromString("Account"), PyBytes_FromString(iter->get_account().c_str()) );
 		PyDict_SetItem(list_item, PyBytes_FromString("Comment"), PyBytes_FromString(iter->get_comment().c_str()) );
 		PyObject* date = PyDate_FromDate(iter->get_date().get_year(), iter->get_date().get_month(), iter->get_date().get_day());
+		PyDict_SetItem(list_item, PyBytes_FromString("Date"), date);
 		PyList_Append(ret, list_item);
 	}
 		
 	return ret;
 }
 
+/*Test method
 PyObject* return_int(PyObject *, PyObject* x) {
 	long i = PyLong_AsLong(x);
 	PyObject* ret = PyLong_FromLong(i);
 	return ret;
 }
+*/
 
 static PyMethodDef VinToPython_methods[] = {
 	{ "read_from_csv_keytrade", (PyCFunction)read_from_csv_keytrade, METH_O, nullptr },
-	{ "return_int", (PyCFunction)return_int, METH_O, nullptr },
 
 	// Terminate the array with an object containing nulls.
 	{ NULL, NULL, 0, NULL }
