@@ -20,11 +20,11 @@ void TextImportFile::open_file(string filepath, vector<string>& input_vector) {
 }
 void TextImportFileMock::open_file(string filepath, vector<string>& input_vector) {
 	if (filepath == "Dummy Path") {
-		input_vector.push_back(" 2018/0005/0005 ;17.05.2018;16.05.2018;-; Betaling Trans : 16/05/2018 18:07 - E5-MODE W01 SINT 9051 SINT-DENIJ ;-60,00;EUR");
-		input_vector.push_back(" 2018/0005/0004 ;14.05.2018;14.05.2018;BE19651155918412; Overschrijving naar BE19651155918412 Gemeenschappelijk   Maandelijkse storting ;-850,00;EUR");
+		input_vector.push_back(" 2018/0005/0005Â ;17.05.2018;16.05.2018;-;Â Betaling Trans : 16/05/2018 18:07 - E5-MODE W01 SINT 9051 SINT-DENIJÂ ;-60,00;EUR");
+		input_vector.push_back("Â 2018/0005/0004Â ;14.05.2018;14.05.2018;BE19651155918412;Â Overschrijving naar BE19651155918412 Gemeenschappelijk   Maandelijkse stortingÂ ;-850,00;EUR");
 	}
 	else if (filepath == "Dummy Path Positive") {
-		input_vector.push_back(" 2018/0005/0003 ;07.05.2018;02.05.2018;-; 5 eurocent/verrichting - van 01/04/2018 tot 30/04/2018 ;+0,40;EUR");
+		input_vector.push_back("Â 2018/0005/0003Â ;07.05.2018;02.05.2018;-;Â 5 eurocent/verrichting - van 01/04/2018 tot 30/04/2018Â ;+0,40;EUR");
 	}
 	else if (filepath == "Dummy Path Empty") {
 		input_vector.push_back("");
@@ -92,7 +92,7 @@ LineItem TextImport::read_line_from_csv_keytrade(string& s)
 	input_comment = comment;
 	position = position_end;
 	
-	//sign and mount
+	//sign and amount
 	position_end = s.find_first_of(";", position + 1);
 	input_sign = s.substr(position + 1, 1)[0];
 	if (input_sign != '-') {
