@@ -10,7 +10,7 @@ public:
 	TextImportFile() { }
 
 	//open a CSV file and read the contents into a vector<string>
-	virtual void open_file(std::string, std::vector<std::string>&);
+	virtual void open_file(std::string, std::vector<std::wstring>&);
 };
 class TextImportFileMock : public TextImportFile {
 public:
@@ -21,9 +21,9 @@ class TextImport {
 	std::vector<LineItem> ImportedItems;
 
 	//read from a vector of strings to ImportedItems
-	bool read_from_csv_keytrade(std::vector<std::string>&);
+	bool read_from_csv_keytrade(std::vector<std::wstring>&);
 	//read one string line into a LineItem
-	LineItem read_line_from_csv_keytrade(std::string&);
+	LineItem read_line_from_csv_keytrade(std::wstring&);
 public:
 	TextImport() { }
 	TextImport(std::string, TextImportFile& file_access = TextImportFile() );
@@ -32,3 +32,4 @@ public:
 	std::vector<LineItem>& get_imported_items() { return ImportedItems; }
 };
 
+std::string wstring_to_utf8(const std::wstring&);
