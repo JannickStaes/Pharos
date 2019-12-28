@@ -1,0 +1,14 @@
+﻿{% extends "Transactions/base.html" %}
+
+{% block content %}
+<section class="section is-medium">
+    <h1 class="title">
+        Upload From File
+    </h1>
+
+    <form action = "{% url 'Transactions:upload' %}" method = "POST">
+        {% csrf_token %}
+        <button class="button is-link" type = "submit">Upload Next Line</button>
+    </form>
+</section>
+{% endblock content %}

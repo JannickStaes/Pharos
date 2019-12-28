@@ -68,7 +68,8 @@ LineItem TextImport::read_line_from_csv_keytrade(string& s)
 	position = s.find_first_of(";", position + 1);//ignore second value (datum)
 												  
 	//date
-	Date d(s.substr(position + 1, 10)); //fixed length of 10 chars for the date
+	string date_string = s.substr(position + 1, 10);
+	Date d(date_string); //fixed length of 10 chars for the date
 	input_date = d;
 	position = s.find_first_of(";", position + 1);
 

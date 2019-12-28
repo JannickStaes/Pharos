@@ -1,7 +1,10 @@
-#include <Python.h>
+﻿#include <Python.h>
 #include <datetime.h>
 #include "TextImport.h"
 #include <iostream>
+
+using std::string;
+using std::vector;
 
 PyObject* read_from_csv_keytrade(PyObject *self, PyObject* inputfile_location) {
 	PyDateTime_IMPORT;
@@ -9,20 +12,20 @@ PyObject* read_from_csv_keytrade(PyObject *self, PyObject* inputfile_location) {
 	Py_DECREF(str);
 	const char* inputfile_c = PyBytes_AsString(str);
 	TextImport import(inputfile_c);
-	std::vector<LineItem> new_items = import.get_imported_items();
+	vector<LineItem> new_items = import.get_imported_items();
 	
 	PyObject* ret = PyList_New(0);
 
 	for (std::vector<LineItem>::const_iterator iter = new_items.begin(); iter != new_items.end(); iter++) {
 		PyObject* list_item = PyDict_New();
-		PyDict_SetItem(list_item, PyBytes_FromString("Amount"), PyFloat_FromDouble(iter->get_amount()) );
-		std::string sign_str(1,iter->get_sign() );
-		PyDict_SetItem(list_item, PyBytes_FromString("Sign"), PyBytes_FromString(sign_str.c_str()) );
-		PyDict_SetItem(list_item, PyBytes_FromString("Currency"), PyBytes_FromString(iter->get_currency().c_str()) );
-		PyDict_SetItem(list_item, PyBytes_FromString("Account"), PyBytes_FromString(iter->get_account().c_str()) );
-		PyDict_SetItem(list_item, PyBytes_FromString("Comment"), PyBytes_FromString(iter->get_comment().c_str()) );
+		PyDict_SetItem(list_item, PyUnicode_FromString("Amount"), PyFloat_FromDouble(iter->get_amount()) );
+		string sign_str(1,iter->get_sign() );
+		PyDict_SetItem(list_item, PyUnicode_FromString("Sign"), PyUnicode_FromString(sign_str.c_str()) );
+		PyDict_SetItem(list_item, PyUnicode_FromString("Currency"), PyUnicode_FromString(iter->get_currency().c_str()) );
+		PyDict_SetItem(list_item, PyUnicode_FromString("Account"), PyUnicode_FromString(iter->get_account().c_str()) );
+		PyDict_SetItem(list_item, PyUnicode_FromString("Comment"), PyUnicode_FromString(iter->get_comment().c_str()) );
 		PyObject* date = PyDate_FromDate(iter->get_date().get_year(), iter->get_date().get_month(), iter->get_date().get_day());
-		PyDict_SetItem(list_item, PyBytes_FromString("Date"), date);
+		PyDict_SetItem(list_item, PyUnicode_FromString("Date"), date);
 		PyList_Append(ret, list_item);
 	}
 		

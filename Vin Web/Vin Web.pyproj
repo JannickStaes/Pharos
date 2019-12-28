@@ -64,6 +64,7 @@
   <ItemGroup>
     <Content Include="Transactions\static\Transactions\basic.css" />
     <Content Include="Transactions\static\Transactions\bulma.css" />
+    <Content Include="Transactions\templates\Transactions\csv_upload.html" />
     <Content Include="Transactions\templates\Transactions\detail.html" />
     <Content Include="Transactions\templates\Transactions\index.html" />
     <Content Include="Transactions\templates\Transactions\list.html" />

@@ -1,6 +1,7 @@
 #include "XMLDatabase.h"
 
 using std::string;
+using std::wstring;
 using std::to_string;
 using std::vector;
 using tinyxml2::XMLDocument;
