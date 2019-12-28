@@ -92,10 +92,15 @@ LineItem TextImport::read_line_from_csv_keytrade(string& s)
 	input_comment = comment;
 	position = position_end;
 	
-	//amount and sign
+	//sign and mount
 	position_end = s.find_first_of(";", position + 1);
 	input_sign = s.substr(position + 1, 1)[0];
-	position++;
+	if (input_sign != '-') {
+		input_sign = '+'; //if it's not an expense, it must be a receipt. 
+	}
+	else {
+		position++; //the amount contains a '-' in front, the actual amount starts one position further
+	}
 	string substr = s.substr(position + 1, position_end - position - 1);//subtract 1 since the last character is the ';' itself
 	//switch , and . since keytrade format is in European notation and C++ atof works with US notation
 	string str_amount = substr;
