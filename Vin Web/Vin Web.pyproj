@@ -37,9 +37,6 @@
     <Compile Include="Transactions\apps.py" />
     <Compile Include="Transactions\migrations\__init__.py" />
     <Compile Include="Transactions\models.py" />
-    <Compile Include="Transactions\testdebugging.py">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Transactions\urls.py">
       <SubType>Code</SubType>
     </Compile>
