@@ -5,7 +5,7 @@
     <RootNamespace>Vin Web</RootNamespace>
     <SuppressEnvironmentCreationPrompt>True</SuppressEnvironmentCreationPrompt>
     <TestFramework>Pytest</TestFramework>
-    <EnableNativeCodeDebugging>True</EnableNativeCodeDebugging>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
     <InterpreterId>Global|PythonCore|3.8</InterpreterId>
   </PropertyGroup>
   <PropertyGroup>
@@ -14,11 +14,11 @@
     <ProjectGuid>ab837d6b-8af4-4d42-9bcd-97079b6cfb58</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
-    <StartupFile>Transactions\testdebugging.py</StartupFile>
+    <StartupFile>manage.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
-    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <LaunchProvider>Django launcher</LaunchProvider>
     <DjangoSettingsModule>Vin_Web.settings</DjangoSettingsModule>
     <WebBrowserUrl>http://localhost</WebBrowserUrl>
     <OutputPath>.</OutputPath>

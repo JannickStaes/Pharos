@@ -2,7 +2,6 @@
 #include <fstream>
 #include <limits>
 #include <ctype.h>
-#include <locale>
 #include <codecvt>
 
 using std::string;
