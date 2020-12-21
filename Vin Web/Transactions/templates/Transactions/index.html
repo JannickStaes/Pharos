@@ -1,9 +1,11 @@
 {% extends "Transactions/base.html" %}
 
 {% block content %}
+    {% load static %}
     <section class="hero is-light is-bold is-large">
         <div class="hero-body">
             <div class="container">
+                <img src="{% static 'Transactions/images/VinAlt.png' %}" id="titleImg" alt="Title image">
                 <h1 class="title">
                     Vin
                 </h1>
@@ -20,6 +22,9 @@
                 </form>
                 <form action="{% url 'Transactions:list' %}" method = "get">
                     <input class="button is-success" type="submit" value="History">
+                </form>
+                <form>
+                    <input class="button is-success" value="Change user" id="changeUserButton">
                 </form>
             </div>
         </div>

@@ -1,23 +1,23 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="en">
 <head>
-    <title>Vin</title>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vin</title>
 
     {% load static %}
-    <link rel="stylesheet" href="{% static 'Transactions/bulma.css' %}">
-    <link rel="stylesheet" href="{% static 'Transactions/basic.css' %}">
+    <link rel="stylesheet" href="{% static 'Transactions/styles/bulma.css' %}">
+    <link rel="stylesheet" href="{% static 'Transactions/styles/basic.css' %}">
 
-    <script src="https://kit.fontawesome.com/97ddf60dc4.js" crossorigin="anonymous"></script>
+    
 </head>
 <body>
     <nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="{% url 'Transactions:index' %}">
-                <!-- <img src="{% static 'Transactions/images/vin icon.png' %}"> -->
-                <h2 style="margin-left:2px">Vin</h2>
+                <img src="{% static 'Transactions/images/vin icon.png' %}" alt="Vin Logo"> 
+                <h2 style="margin-left:5px">Vin</h2>
             </a>
         </div>
 
@@ -48,6 +48,7 @@
         </div>
     </footer>
 
+    <script src="{% static 'Transactions/scripts/main.js' %}"></script>
 </body>
 </html>
 

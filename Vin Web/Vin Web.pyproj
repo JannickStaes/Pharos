@@ -54,13 +54,18 @@
     <Folder Include="Transactions\static\" />
     <Folder Include="Transactions\static\Transactions\" />
     <Folder Include="Transactions\static\Transactions\images\" />
+    <Folder Include="Transactions\static\Transactions\scripts\" />
+    <Folder Include="Transactions\static\Transactions\styles\" />
     <Folder Include="Transactions\templates\" />
     <Folder Include="Transactions\templates\Transactions\" />
     <Folder Include="Vin_Web\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Transactions\static\Transactions\basic.css" />
-    <Content Include="Transactions\static\Transactions\bulma.css" />
+    <Content Include="Transactions\static\Transactions\images\vin icon.png" />
+    <Content Include="Transactions\static\Transactions\images\VinAlt.png" />
+    <Content Include="Transactions\static\Transactions\scripts\main.js" />
+    <Content Include="Transactions\static\Transactions\styles\basic.css" />
+    <Content Include="Transactions\static\Transactions\styles\bulma.css" />
     <Content Include="Transactions\templates\Transactions\csv_upload.html" />
     <Content Include="Transactions\templates\Transactions\detail.html" />
     <Content Include="Transactions\templates\Transactions\index.html" />
