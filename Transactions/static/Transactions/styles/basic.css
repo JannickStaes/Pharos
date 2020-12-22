@@ -1,0 +1,27 @@
+html {
+    font-size: 16px;
+    font-family: 'Segoe UI';
+}
+
+body {
+    text-align: center;
+}
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 20px;
+    text-align: center;
+}
+
+form {
+    margin: 20px;
+    display: inline-block;
+}
+
+.navbar-item {
+    line-height: 3;
+}

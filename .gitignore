@@ -263,6 +263,3 @@ __pycache__/
 #Jannick 07/12/2019: solution configuration needs to be separate since python libraries are not always located in the same directory
 *.vcxproj
 
-#Jannick 29/12/2019: exclude tinyxml2: it's an external library I'll never change
-tinyxml2.h
-tinyxml2.cpp
