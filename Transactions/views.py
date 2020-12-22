@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404
 from django.urls import reverse
-from VinLibrary import read_from_csv_keytrade
+#from VinLibrary import read_from_csv_keytrade
 
 from .models import Transaction
 
@@ -35,7 +35,7 @@ def list(request):
 
 def read_from_csv(request):
     if request.method == 'POST':
-        items = read_from_csv_keytrade('C:\\Users\\staes\\source\\repos\\JannickStaes\\Vin\\Vin Library\\Keytrade Download.csv')
+        #items = read_from_csv_keytrade('C:\\Users\\staes\\source\\repos\\JannickStaes\\Vin\\Vin Library\\Keytrade Download.csv')
 
         for item in items:
             t = Transaction(amount = item['Amount'],
