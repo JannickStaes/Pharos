@@ -61,7 +61,7 @@
     <Folder Include="Vin_Web\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Requirements.txt" />
+    <Content Include="requirements.txt" />
     <Content Include="Transactions\static\Transactions\images\vin icon.png" />
     <Content Include="Transactions\static\Transactions\images\VinAlt.png" />
     <Content Include="Transactions\static\Transactions\scripts\main.js" />
