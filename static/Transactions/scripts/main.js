@@ -35,3 +35,10 @@ if (!localStorage.getItem('name')) {
 myButton.onclick = function () {
     setUserName();
 }
+
+//click to edit amount in detail screen
+let amount = document.querySelector('#detailAmount');
+let amountInput = document.querySelector('#amountInput');
+amount.onclick = function () {
+    amount = amountInput;
+}
