@@ -266,3 +266,5 @@ __pycache__/
 #Jannick 07/12/2019: solution configuration needs to be separate since python libraries are not always located in the same directory
 *.vcxproj
 
+#Jannick 23/12/2020: exclude sqlite db to keep dev db (on local pc) separate from hosted db
+*.sqlite
