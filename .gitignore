@@ -267,4 +267,4 @@ __pycache__/
 *.vcxproj
 
 #Jannick 23/12/2020: exclude sqlite db to keep dev db (on local pc) separate from hosted db
-*.sqlite
+*.sqlite3
