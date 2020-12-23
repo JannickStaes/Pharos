@@ -6,7 +6,7 @@
         Details
     </h1>
 
-    <p>Amount: {{ transaction.sign}} {{ transaction.amount }} {{ transaction.currency }}</p>
+    <p id="amountDisplay">Amount: {{ transaction.sign}} {{ transaction.amount }} {{ transaction.currency }}</p>
     <p>On: {{ transaction.date }}</p>
     {% if transaction.sign == '-' %}
         <p>To: {{ transaction.account }} </p>
