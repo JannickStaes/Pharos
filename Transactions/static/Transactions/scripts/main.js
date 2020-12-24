@@ -1,5 +1,5 @@
 
-//image change
+/*/image change
 let myImage = document.querySelector('#titleImg');
 
 myImage.onclick = function () {
@@ -9,11 +9,11 @@ myImage.onclick = function () {
     } else {
         myImage.setAttribute('src', '/static/Transactions/images/vin icon.png');
     }
-}
+}*/
 
-//button to change user name and dynamic welcome message
+/*button to change user name and dynamic welcome message
 let myButton = document.querySelector('#changeUserButton');
-let myHeading = document.querySelector('h1');
+let myHeading = document.querySelector('#welcomeMessage');
 
 function setUserName() {
     let myName = prompt('Please enter your name.');
@@ -34,11 +34,14 @@ if (!localStorage.getItem('name')) {
 
 myButton.onclick = function () {
     setUserName();
+
+//amount changer
+const amount = document.querySelector('#amountDisplay');
+
+amount.addEventListener('click', updateAmount);
+
+function updateAmount() {
+    let newAmount = prompt('Enter a new amount');
+    amount.textContent = 'Amount: ' + newAmount + ' EUR';
 }
 
-//click to edit amount in detail screen
-let amount = document.querySelector('#detailAmount');
-let amountInput = document.querySelector('#amountInput');
-amount.onclick = function () {
-    amount.replaceWith(amountInput);
-}
