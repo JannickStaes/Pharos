@@ -10,7 +10,21 @@
     <link rel="stylesheet" href="{% static 'Transactions/styles/bulma.css' %}">
     <link rel="stylesheet" href="{% static 'Transactions/styles/basic.css' %}">
 
-    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function createParagraph() {
+                let para = document.createElement('p');
+                para.textContent = 'You clicked the button!';
+                document.body.appendChild(para);
+            }
+
+            const buttons = document.querySelectorAll('button');
+
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].addEventListener('click', createParagraph);
+            }
+        });
+    </script>
 </head>
 <body>
     <nav class="navbar is-dark is-fixed-top" role="navigation" aria-label="main navigation">
@@ -41,6 +55,8 @@
     {% block content %}
 
     {% endblock content %}
+
+    <button>Click me</button>
 
     <footer class="footer">
         <div class="content has-text-centered">

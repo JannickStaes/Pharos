@@ -34,7 +34,6 @@ if (!localStorage.getItem('name')) {
 
 myButton.onclick = function () {
     setUserName();
-}*/
 
 //amount changer
 const amount = document.querySelector('#amountDisplay');
@@ -45,3 +44,4 @@ function updateAmount() {
     let newAmount = prompt('Enter a new amount');
     amount.textContent = 'Amount: ' + newAmount + ' EUR';
 }
+
