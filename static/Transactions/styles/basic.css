@@ -3,10 +3,6 @@ html {
     font-family: 'Segoe UI';
 }
 
-body {
-    text-align: center;
-}
-
 h1 {
     font-size: 60px;
     text-align: center;
@@ -17,14 +13,14 @@ h2 {
     text-align: center;
 }
 
+form {
+    display: grid;
+}
+
 #welcomeMessage {
     font-style: italic;
     margin-top: 5px;
-}
-
-form {
-    margin: 20px;
-    display: inline-block;
+    text-align: center;
 }
 
 .navbar-item {

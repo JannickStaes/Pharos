@@ -4,42 +4,45 @@
 {% load static %}
 <script defer src="{% static 'Transactions/scripts/numberGame.js'%}"></script>
 <section class="section is-medium">
-    <div class="container">
-        <h1 class="title">
-            Number Guessing Game
-        </h1>
+	<div class="container">
+		<h1 class="title">
+			Number Guessing Game
+		</h1>
    
-        <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
+		<p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
 
-        <div class="columns is-centered" style="margin-top: 20px">
-            <div class="column is-half">
-                <div class="field is-horizontal">
-                    <div class="field-label">
-                        <label class="label" for="guessField">Enter a guess: </label>
-                    </div>
-                    <div class="field-body">
-                        <div class="field has-addons">
-                            <div class="control">
-                                <input type="text" class="input" id="guessField">
-                            </div>
-                            <div class="control">
-                                <input type="submit" value="Submit guess" class="button is-link" id="guessSubmit">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="resultParas">
-      <p class="guesses"></p>
-      <p class="lastResult"></p>
-      <p class="lowOrHi"></p>
-    </div>
+		<div class="columns is-centered" style="margin-top: 20px">
+			<div class="column is-half">
+				<div class="field is-horizontal">
+					<div class="field-label">
+						<label class="label" for="guessField">Enter a guess: </label>
+					</div>
+					<div class="field-body">
+						<div class="field has-addons">
+							<div class="control">
+								<input type="text" class="input" id="guessField">
+							</div>
+							<div class="control">
+								<input type="submit" value="Submit guess" class="button is-link" id="guessSubmit">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> 
+	</div>
+	
+	<div class="container">
+	  <p class="guesses"></p>
+	  <p class="lastResult"></p>
+	  <p class="lowOrHi"></p>
+	</div>
 
-    <form action="{% url 'Transactions:index' %}" method="GET">
-        <button class="button is-link" type = "submit">Back</button>
-    </form>
+	<div class="container">
+		<form action="{% url 'Transactions:index' %}" method="GET">
+			<button class="button is-link" type = "submit">Back</button>
+		</form>
+	</div>
+
 </section>
 {% endblock content %}

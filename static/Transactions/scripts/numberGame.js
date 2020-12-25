@@ -10,12 +10,6 @@ const guessField = document.querySelector('#guessField');
 let guessCount = 1;
 let resetButton;
 
-guessSubmit.addEventListener('click', checkGuess);
-
 function checkGuess() {
-    let userGuess = Number(guessField.value);
-    if (guessCount === 1) {
-        guesses.textContent = 'Previous guesses: ';
-    }
-    guesses.textContent += userGuess + ' ';
+    alert('I am a placeholder');
 }

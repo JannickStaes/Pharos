@@ -14,7 +14,8 @@ h2 {
 }
 
 form {
-    display: grid;
+    display: inline;
+    margin: 2px;
 }
 
 #welcomeMessage {
@@ -25,6 +26,15 @@ form {
 
 .navbar-item {
     line-height: 3;
+}
+
+.container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#gameInputform {
+    text-align: center;
 }
 
 #amountDisplay {
