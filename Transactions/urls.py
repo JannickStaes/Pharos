@@ -8,5 +8,6 @@ urlpatterns = [
     path('<int:transaction_id>/', views.detail, name = 'detail'),
     path('new/', views.add_manual, name = 'manual_add'),
     path('list/', views.list, name = 'list'),
-    path('upload/', views.read_from_csv, name = 'upload')
+    path('upload/', views.read_from_csv, name = 'upload'),
+    path('numberGame/', views.numberGame, name = 'numberGame')
 ]
