@@ -64,7 +64,9 @@
     <Content Include="requirements.txt" />
     <Content Include="Transactions\static\Transactions\images\vin icon.png" />
     <Content Include="Transactions\static\Transactions\images\VinAlt.png" />
-    <Content Include="Transactions\static\Transactions\scripts\main.js" />
+    <Content Include="Transactions\static\Transactions\scripts\detail.js" />
+    <Content Include="Transactions\static\Transactions\scripts\index.js" />
+    <Content Include="Transactions\static\Transactions\scripts\base.js" />
     <Content Include="Transactions\static\Transactions\styles\basic.css" />
     <Content Include="Transactions\static\Transactions\styles\bulma.css" />
     <Content Include="Transactions\templates\Transactions\csv_upload.html" />
