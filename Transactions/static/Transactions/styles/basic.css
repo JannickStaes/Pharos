@@ -13,9 +13,14 @@ h2 {
     text-align: center;
 }
 
+form {
+    display: grid;
+}
+
 #welcomeMessage {
     font-style: italic;
     margin-top: 5px;
+    text-align: center;
 }
 
 .navbar-item {
