@@ -2,6 +2,7 @@
 
 {% block content %}
     {% load static %}
+    <script defer src="{% static 'Transactions/scripts/index.js'%}"></script>
     <section class="hero is-light is-bold is-large">
         <div class="hero-body">
             <div class="container">
@@ -13,18 +14,21 @@
                 </h2>
                 <h3 id="welcomeMessage"></h3>
             </div>
-            <div class="container">
+            <div class="container">               
                 <form action="{% url 'Transactions:manual_add' %}" method = "get">
                     <input class="button is-success" type="submit" value="Add Transaction">
-                </form>
+                </form>                   
                 <form action="{% url 'Transactions:upload' %}" method = "get">
                     <input class="button is-success" type="submit" value="Upload From File">
-                </form>
+                </form>                                       
                 <form action="{% url 'Transactions:list' %}" method = "get">
                     <input class="button is-success" type="submit" value="History">
                 </form>
                 <form>
                     <input class="button is-success" value="Change user" id="changeUserButton">
+                </form>
+                <form action="{% url 'Transactions:numberGame' %}" method="get">
+                    <input class="button is-success" type="submit" value="Guess Number Game" />
                 </form>
             </div>
         </div>

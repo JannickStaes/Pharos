@@ -268,3 +268,5 @@ __pycache__/
 
 #Jannick 23/12/2020: exclude sqlite db to keep dev db (on local pc) separate from hosted db
 *.sqlite3
+/Vin Web.pyproj
+/Vin.sln

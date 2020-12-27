@@ -9,6 +9,9 @@ from .models import Transaction
 def index(request):
     return render(request, 'Transactions/index.html')
 
+def numberGame(request):
+    return render(request, 'Transactions/numberGame.html')
+
 def detail(request, transaction_id):
     transaction = get_object_or_404(Transaction, pk = transaction_id)
     context = { 'transaction': transaction }

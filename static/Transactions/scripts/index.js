@@ -1,4 +1,3 @@
-
 /*/image change
 let myImage = document.querySelector('#titleImg');
 
@@ -11,7 +10,7 @@ myImage.onclick = function () {
     }
 }*/
 
-/*button to change user name and dynamic welcome message
+//button to change user name and dynamic welcome message
 let myButton = document.querySelector('#changeUserButton');
 let myHeading = document.querySelector('#welcomeMessage');
 
@@ -34,14 +33,4 @@ if (!localStorage.getItem('name')) {
 
 myButton.onclick = function () {
     setUserName();
-
-//amount changer
-const amount = document.querySelector('#amountDisplay');
-
-amount.addEventListener('click', updateAmount);
-
-function updateAmount() {
-    let newAmount = prompt('Enter a new amount');
-    amount.textContent = 'Amount: ' + newAmount + ' EUR';
 }
-
