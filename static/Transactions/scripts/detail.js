@@ -1,11 +1,12 @@
-//amount changer
-const amount = document.querySelector('#amountDisplay');
+//click to edit amount
+const amount = document.querySelector('#displayDetail');
+const editButton = document.querySelector('#amountEditButton');
 
-if (typeof amount !== 'undefined' && amount != null) {
-    amount.addEventListener('click', updateAmount);
-}
+editButton.addEventListener('click', editAmount);
 
-function updateAmount() {
-    let newAmount = prompt('Enter a new amount');
-    amount.textContent = 'Amount: ' + newAmount + ' EUR';
+function editAmount() {
+    amount.textContent = '';
+    amount.removeChild(editButton);
+
+
 }

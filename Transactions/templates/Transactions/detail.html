@@ -8,20 +8,71 @@
         Details
     </h1>
 
-    <p id="amountDisplay">Amount: {{ transaction.sign}} {{ transaction.amount }} {{ transaction.currency }}</p>
+    <div class="container">
+        <div id="detail">
+            <p id="displayDetail">
+                Amount: {{ transaction.sign}} {{ transaction.amount }} {{ transaction.currency }}
+                <i class="fas fa-edit" id="amountEditButton"></i>
+            </p>
 
-    <p>On: {{ transaction.date }}</p>
-    {% if transaction.sign == '-' %}
-        <p>To: {{ transaction.account }} </p>
-    {% else %}
-        <p>From: {{ transaction.account }} </p>
-    {% endif %}
-    <p>Comment: {{ transaction.comment }}</p>
+            <div id="editDetail" class="columns is-centered">
+                <form>
+                    <div class="field is-horizontal">
+                        <div class="field-label is-small">
+                            <label class="label" for="Amount">Amount</label>
+                        </div>
+                    
+                        <div class="field-body">
+                            <div class="field has-addons">
+                                <p class="control">
+                                    <span class="select is-small">
+                                        <select name="Currency">
+                                            <option>EUR</option>
+                                            <option>USD</option>
+                                            <option>GBP</option>
+                                        </select> 
+                                    </span>
+                                </p>
+                                <p id ="amountInput" class="control">
+                                    <input class="input is-small" type="text" placeholder="Amount" name="Amount">
+                                </p>
+                            </div>
 
-    <form action="{% url 'Transactions:list' %}" method="GET">
-        <button class="button is-link" type= "submit">Edit</button>
-        <button class="button is-link" type = "submit">Back</button>
-    </form>
+                            <div class="field is-grouped is-grouped-centered">
+                               <p class="control">
+                                 <a class="button is-primary is-small">
+                                   Submit
+                                 </a>
+                               </p>
+                               <p class="control">
+                                 <a class="button is-light is-small">
+                                   Cancel
+                                 </a>
+                               </p>
+                            </div>
+                        </div>                    
+                    </div>                             
+                </form>
+            </div>
+        </div>
+
+        <p>On: {{ transaction.date }}</p>
+
+        {% if transaction.sign == '-' %}
+            <p>To: {{ transaction.account }} </p>
+        {% else %}
+            <p>From: {{ transaction.account }} </p>
+        {% endif %}
+
+        <p>Comment: {{ transaction.comment }}</p>
+
+        <div style="margin-top: 20px">
+            <form action="{% url 'Transactions:list' %}" method="GET" >
+                <button class="button is-link" type = "submit">Back</button>
+            </form>
+        </div>
+    </div>
+    
 </section>
 {% endblock content %}
 
