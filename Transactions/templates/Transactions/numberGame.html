@@ -28,17 +28,16 @@
 						</div>
 					</div>
 				</div>
+
+				<div id="resultParas">
+					<p class="guesses"></p>
+					<p class="lastResult"></p>
+					<p class="lowOrHi"></p>
+				</div>				
 			</div>
 		</div> 
-	</div>
-	
-	<div class="container">
-	  <p class="guesses"></p>
-	  <p class="lastResult"></p>
-	  <p class="lowOrHi"></p>
-	</div>
 
-	<div class="container">
+	<div class="container" id="guessGameButtons">
 		<form action="{% url 'Transactions:index' %}" method="GET">
 			<button class="button is-link" type = "submit">Back</button>
 		</form>
