@@ -1,5 +1,5 @@
 # Vin
-Your financial buddy
+Automates your money
 	
 **V0.1** (Done)
 	Download to CSV vanuit Keytrade  
