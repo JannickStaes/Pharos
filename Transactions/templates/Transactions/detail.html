@@ -9,13 +9,28 @@
     </h1>
 
     <div class="container">
-        <div id="detail">
-            <p id="displayDetail">
-                Amount: {{ transaction.sign}} {{ transaction.amount }} {{ transaction.currency }}
-                <i class="fas fa-edit" id="amountEditButton"></i>
-            </p>
-
-            <div id="editDetail" class="columns is-centered">
+        <div class="columns is-mobile" id="details">
+            <div class="column" style="text-align: right" id="descriptions">
+                <p>Amount: </p>
+                <p>On: </p>
+                {% if transaction.sign == '-' %}
+                    <p>To: </p>
+                {% else %}
+                    <p>From: </p>
+                {% endif %}
+                <p>Comment: </p>
+            </div>
+            <div class="column" style="text-align: left" id="values">
+                <p>
+                    {{ transaction.sign}} {{ transaction.amount }} {{ transaction.currency }} 
+                    <i class="fas fa-edit" id="amountEditButton"></i>
+                </p>
+                <p>{{ transaction.date }}</p>
+                <p>{{ transaction.account }}</p>
+                <p>{{ transaction.comment }}</p>
+            </div>
+                        
+            <div id="editAmount" class="columns is-centered">
                 <form>
                     <div class="field is-horizontal">
                         <div class="field-label is-small">
@@ -55,16 +70,6 @@
                 </form>
             </div>
         </div>
-
-        <p>On: {{ transaction.date }}</p>
-
-        {% if transaction.sign == '-' %}
-            <p>To: {{ transaction.account }} </p>
-        {% else %}
-            <p>From: {{ transaction.account }} </p>
-        {% endif %}
-
-        <p>Comment: {{ transaction.comment }}</p>
 
         <div style="margin-top: 20px">
             <form action="{% url 'Transactions:list' %}" method="GET" >
