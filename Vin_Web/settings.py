@@ -25,7 +25,7 @@ SECRET_KEY = '8e00c117-c620-4a43-bf89-57277f2a064d'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['nightsky.eu.pythonanywhere.com', 'localhost']
+ALLOWED_HOSTS = ['nightsky.eu.pythonanywhere.com', 'localhost', '127.0.0.1']
 
 # Application references
 # https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-INSTALLED_APPS

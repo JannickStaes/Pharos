@@ -270,3 +270,4 @@ __pycache__/
 *.sqlite3
 /Vin Web.pyproj
 /Vin.sln
+.venv/
