@@ -18,7 +18,7 @@ class Transaction(models.Model):
     category = models.ForeignKey( Category, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.sign + str(self.amount) + ' ' + self.currency + ' ' + self.accountpy
+        return self.sign + str(self.amount) + ' ' + self.currency + ' ' + self.account
     
 class Bucket(models.Model):
     id = models.BigAutoField(primary_key=True)
