@@ -56,7 +56,7 @@ def budget_overview(request):
     context = {
         'budgets': budgets
     }
-    return render(request, 'Transactions/budget_overview.html', context)
+    return render(request, 'Transactions/budgets.html', context)
 
 def budget_add(request):
     budgets = Budget.objects.all()
@@ -80,5 +80,12 @@ def budget_add(request):
                     startDate = request.POST['Start Date'],
                     endDate = request.POST['End Date'])
         b.save()
-        return HttpResponseRedirect(reverse('Transactions:budget_overview'))
+        return HttpResponseRedirect(reverse('Transactions:budgets'))
     return render(request, 'Transactions/budget_add.html', context)
+
+def budget_detail(request, budget_id):
+    budget = get_object_or_404(Budget, pk = budget_id)
+    context = { 'budget': budget }
+    if request.method == 'POST':
+        budget.delete()
+    return render(request, 'Transactions/budget_detail.html', context)
