@@ -1,0 +1,56 @@
+{% extends "Transactions/base.html" %}
+
+{% block content %}
+    <section class="section is-medium">
+        <h1 class="title" style="margin-bottom: 50px">
+            Budgets
+            <form action="{% url 'Transactions:budget_add' %}" method="GET" >
+                <button class="button is-link is-small" type = "submit">Add</button>
+            </form>
+        </h1>
+
+        <div class="columns">
+            {% for budget in budgets %}
+                <div class="column">
+                    <h2> {{ budget.name }} </h2>
+                    <table id="budget" class="table" style="margin-left:auto; margin-right: auto">
+                        <tbody>
+                            <tr>
+                                <td> Target Budget </td>
+                                <td> {{ budget.target }}</td>
+                                <td> {{ budget.currency }}</td>
+                                <td> 
+                                    <span class="icon">
+                                        <i class="fas fa-edit"></i>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> Paid so far </td>
+                                <td> {{ budget.actuals }} </td>
+                                <td> {{ budget.currency }}</td>
+                                <td> 
+                                    <span class="icon">
+                                        <i class="fas fa-edit"></i>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td> Estimated final cost </td>
+                                <td> {{ budget.eac }} </td>
+                                <td> {{ budget.currency }}</td>
+                                <td> 
+                                    <span class="icon">
+                                        <i class="fas fa-edit"></i>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            {% endfor%}
+        </div>
+
+    </section>
+
+{% endblock content %}

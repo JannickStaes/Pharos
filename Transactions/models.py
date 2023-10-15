@@ -1,12 +1,5 @@
 from django.db import models
 
-class Category(models.Model):
-    id = models.BigAutoField(primary_key=True)
-    name = models.CharField( max_length = 40 )
-
-    def __str__(self):
-        return self.name
-
 class Transaction(models.Model):
     id = models.BigAutoField(primary_key=True)
     amount = models.FloatField()
@@ -15,16 +8,19 @@ class Transaction(models.Model):
     date = models.DateField()
     account = models.CharField( max_length = 16)
     comment = models.CharField( max_length = 200)
-    category = models.ForeignKey( Category, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.sign + str(self.amount) + ' ' + self.currency + ' ' + self.account
     
-class Bucket(models.Model):
+class Budget(models.Model):
     id = models.BigAutoField(primary_key=True)
-    budget = models.FloatField()
+
+    name = models.CharField ( max_length= 40 )
+    target = models.FloatField()
     actuals = models.FloatField()
     eac = models.FloatField()
+    currency = models.CharField( max_length = 3)
+
     startDate= models.DateField()
     endDate = models.DateField()
 

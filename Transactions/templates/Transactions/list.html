@@ -1,34 +1,38 @@
 {% extends "Transactions/base.html" %}
 
 {% block content %}
-<section class="section is-medium">
+<section class="section is-medium" style="width:25rem; margin-left:auto; margin-right: auto">
     <h1 class="title">
         Transaction History
     </h1>
-    <table id="transactions" class="table" style="margin-left:auto; margin-right: auto">
-        <thead>
-            <tr>
-                <th>Amount</th>
-                <th>Date</th> 
-                <th>Seller/Buyer</th>
-                <th>Comment</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for transaction in transactions %}
-            <tr>
-                <td> <a href="{% url 'Transactions:detail' transaction.id %}">{{transaction.sign}} {{ transaction.amount }} {{transaction.currency}}</a> </td>
-                <td> {{ transaction.date }}</td>
-                <td> {{ transaction.account }}</td>
-                <td> {{ transaction.comment }}</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
 
-    <form action="{% url 'Transactions:index' %}" method="GET">
-        <button class="button is-link" type = "submit">Back</button>
-    </form>
+    <div>
+        <table id="transactions" class="table" style="margin-left:auto; margin-right: auto">
+            <thead>
+                <tr>
+                    <th>Amount</th>
+                    <th>Date</th> 
+                    <th>Seller/Buyer</th>
+                    <th>Comment</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for transaction in transactions %}
+                <tr>
+                    <td> <a href="{% url 'Transactions:detail' transaction.id %}">{{transaction.sign}} {{ transaction.amount }} {{transaction.currency}}</a> </td>
+                    <td> {{ transaction.date }}</td>
+                    <td> {{ transaction.account }}</td>
+                    <td> {{ transaction.comment }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <form action="{% url 'Transactions:index' %}" method="GET">
+            <button class="button is-link" type = "submit">Back</button>
+        </form>
+    </div>
+
 </section>
 {% endblock content %}
 

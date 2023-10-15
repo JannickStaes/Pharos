@@ -9,5 +9,6 @@ urlpatterns = [
     path('new/', views.add_manual, name = 'manual_add'),
     path('list/', views.list, name = 'list'),
     path('upload/', views.read_from_csv, name = 'upload'),
-    path('numberGame/', views.numberGame, name = 'numberGame')
+    path('budget_overview/', views.budget_overview, name = 'budget_overview'),
+    path('budget_add/', views.budget_add, name = 'budget_add')
 ]
