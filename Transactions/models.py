@@ -26,4 +26,13 @@ class Budget(models.Model):
 
     transactions = models.ManyToManyField(Transaction)
 
+class Category(models.Model):
+    id = models.BigAutoField(primary_key=True)
 
+    name = models.CharField ( max_length= 40 )
+    target = models.FloatField()
+    actuals = models.FloatField()
+    eac = models.FloatField()
+    currency = models.CharField( max_length = 3)
+
+    budget = models.ForeignKey(Budget, on_delete=models.CASCADE)

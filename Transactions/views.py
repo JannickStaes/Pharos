@@ -86,6 +86,9 @@ def budget_add(request):
 def budget_detail(request, budget_id):
     budget = get_object_or_404(Budget, pk = budget_id)
     context = { 'budget': budget }
-    if request.method == 'POST':
-        budget.delete()
     return render(request, 'Transactions/budget_detail.html', context)
+
+def budget_delete(request, budget_id):
+    budget = get_object_or_404(Budget, pk = budget_id)
+    budget.delete()
+    return HttpResponseRedirect(reverse('Transactions:budgets'))

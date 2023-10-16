@@ -15,16 +15,13 @@
             <p>End Date: {{ budget.endDate }}</p>
         </div>
 
-        <div class="field is-grouped" style="text-align: center;margin-top: 20px">
+        <div class="columns is-centered" style="margin-top: 20px">
             <div class="control">   
-                <form method="POST" >
+                <form>
                     {% csrf_token %}
-                    <button class="button is-danger" type = "submit">Delete</button>
+                    <button class="button is-danger" type = "submit" formaction = "{% url 'Transactions:budget_delete' budget.id %}" formmethod="post">Delete</button>
+                    <button class="button is-link is-light" type = "submit" formaction="{% url 'Transactions:budgets' %}" formmethod="get">Back</button>
                 </form>
-            </div> 
-            <form action="{% url 'Transactions:budgets' %}" method="GET" >
-                <button class="button is-link" type = "submit">Back</button>
-            </form>
         </div>
     </section>
 {% endblock content %}
