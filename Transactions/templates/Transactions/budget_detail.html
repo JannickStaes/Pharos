@@ -1,27 +1,64 @@
 {% extends "Transactions/base.html" %}
 
 {% block content %}
-    <section class="section is-medium">
-        <h1 class="title" style="margin-bottom: 50px">
-            {{ budget.name }}
-        </h1>
+{% load static %}
+<script defer src="{% static 'Transactions/scripts/budget_detail.js'%}"></script>
+<section class="section is-medium">
+    <h1 class="title" style="margin-bottom: 50px">
+        {{ budget.name }}
+    </h1>
 
-        <div style="text-align: center;">
-            <p>Target Budget: {{ budget.target }} {{ budget.currency }}</p>
-            <p>Paid so far: {{ budget.actuals }} {{ budget.currency }}</p>
-            <p>Estimated final cost: {{ budget.eac }} {{ budget.currency }}</p>
-
-            <p>Start Date: {{ budget.startDate }}</p>
-            <p>End Date: {{ budget.endDate }}</p>
+    <div style="text-align: center;">
+        <div class="columns">
+            <div class="column is-1 is-offset-5">
+                <p>Target Budget: </p>
+                <p>Paid so far: </p>
+                <p>Estimated final cost: </p>
+                <p>Start Date: </p>
+                <p>End Date: </p>
+            </div>
+            <div class="column is-1">
+                <div>
+                    <div id="displayBudget">
+                        {{ budget.target }} {{ budget.currency }}
+                        <i class="fas fa-edit" id="budgetEditButton"></i>
+                    </div>
+                    <div id ="editBudget" class="field has-addons">
+                        <div class = "control">
+                            <input class="input is-small" type="text" placeholder="New budget" id="newBudget">
+                        </div>
+                        <div class="control">
+                            <span class="select is-small">
+                              <select>
+                                <option>EUR</option>
+                              </select>
+                            </span>
+                        </div>
+                        <div class = "control">
+                            <a class="button is-primary is-small" type="submit">
+                                Save
+                            </a>
+                        </div>
+                    </div>                           
+                </div>
+                <p>{{ budget.actuals }} {{ budget.currency }}</p>
+                <p>{{ budget.eac }} {{ budget.currency }}</p>
+                <p>{{ budget.startDate }}</p>
+                <p>{{ budget.endDate }}</p>
+            </div>
         </div>
+    </div>
 
-        <div class="columns is-centered" style="margin-top: 20px">
-            <div class="control">   
-                <form>
-                    {% csrf_token %}
-                    <button class="button is-danger" type = "submit" formaction = "{% url 'Transactions:budget_delete' budget.id %}" formmethod="post">Delete</button>
-                    <button class="button is-link is-light" type = "submit" formaction="{% url 'Transactions:budgets' %}" formmethod="get">Back</button>
-                </form>
-        </div>
-    </section>
+    <div class="columns is-centered" style="margin-top: 20px">
+        <div class="control">   
+            <form>
+                {% csrf_token %}
+                <button class="button is-danger" type = "submit" formaction = "{% url 'Transactions:budget_delete' budget.id %}" formmethod="post">Delete</button>
+                <button class="button is-link is-light" type = "submit" formaction="{% url 'Transactions:budgets' %}" formmethod="get">Back</button>
+            </form>
+    </div>
+</section>
+
+
 {% endblock content %}
+

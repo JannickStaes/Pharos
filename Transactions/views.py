@@ -92,3 +92,6 @@ def budget_delete(request, budget_id):
     budget = get_object_or_404(Budget, pk = budget_id)
     budget.delete()
     return HttpResponseRedirect(reverse('Transactions:budgets'))
+
+def budget_target_update(request, budget_id):
+    return HttpResponseRedirect(reverse('Transactions:budgets'))
