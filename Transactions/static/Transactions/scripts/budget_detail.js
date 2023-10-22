@@ -2,10 +2,12 @@
 const displayBudget = document.querySelector('#displayBudget');
 const editBudget = document.querySelector('#editBudget');
 const editButton = document.querySelector('#budgetEditButton');
-const newBudget = document.querySelector('#newBudget')
+const newBudget = document.querySelector('#newBudget');
+const newBudgetButton = document.querySelector('#newBudgetButton')
 
 displayBudget.parentNode.removeChild(editBudget);
 editButton.addEventListener('click', changeToEdit);
+newBudgetButton.addEventListener('click', saveNewBudget);
 
 function changeToEdit() {
     displayBudget.parentNode.appendChild(editBudget);
@@ -13,26 +15,40 @@ function changeToEdit() {
     editBudget.style.margin = 'auto';
 }
 
-const currentURL = window.location.href;
-const url = currentURL + '/update_target/'; 
-const data = {
-  new_budget: newBudget,
-};
+function saveNewBudget() {
+  const csrfToken = getCSRFToken();
+  const currentURL = window.location.href;
+  const url = currentURL + '/update_target/'; 
+  const new_budget = newBudget.value;
+  const data = {
+    new_budget
+  };
 
-fetch(url, {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json', // Adjust the content type as needed
-    // You may need to include additional headers like authentication tokens
-  },
-  body: JSON.stringify(data)
-})
-  .then(response => response.json()) // Parse the response as JSON
-  .then(data => {
-    console.log(data); // Do something with the data
+  fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-CSRFToken': csrfToken, 
+    },
+    body: JSON.stringify(data)
   })
-  .catch(error => {
-    console.error('Error:', error);
-  });
+    .then(response => response.json()) // Parse the response as JSON
+    .then(data => {
+      if(data.redirect) {
+        window.location.href = data.redirect;
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+}
+
+function getCSRFToken() {
+  const csrfCookie = document.cookie.split(';').find(cookie => cookie.trim().startsWith("csrftoken="));
+  if (csrfCookie) {
+    return csrfCookie.split('=')[1];
+  }
+  return null;
+}
 
   

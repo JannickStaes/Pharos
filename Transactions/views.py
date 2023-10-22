@@ -1,7 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.shortcuts import get_object_or_404
 from django.urls import reverse
+import json
 
 from .models import Transaction, Budget
 
@@ -94,4 +95,14 @@ def budget_delete(request, budget_id):
     return HttpResponseRedirect(reverse('Transactions:budgets'))
 
 def budget_target_update(request, budget_id):
-    return HttpResponseRedirect(reverse('Transactions:budgets'))
+    if request.method == 'POST':
+        post_data = json.loads(request.body.decode('utf-8'))
+        new_budget = post_data['new_budget']
+        budget = get_object_or_404(Budget, pk = budget_id)
+        budget.target = new_budget
+        budget.save()
+        
+        redirectUrl = reverse('Transactions:budget_detail', args=[budget_id])
+        returnData = {'redirect': redirectUrl}
+        return JsonResponse(returnData)
+
