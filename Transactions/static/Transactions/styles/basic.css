@@ -36,3 +36,7 @@ form {
 #gameInputform {
     text-align: center;
 }
+
+.fa-edit:hover {
+    color:blue;
+}

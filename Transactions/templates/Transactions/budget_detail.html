@@ -11,22 +11,31 @@
 
     <div style="text-align: center;">
         <div class="columns">
-            <div class="column is-2 is-offset-4">
-                <p>Target Budget: </p>
-                <p>Paid so far: </p>
-                <p>Estimated final cost: </p>
-                <p>Start Date: </p>
-                <p>End Date: </p>
+            <div class="column is-1 is-offset-5" style="text-align: left;">
+                <div class="block">Target Budget: </div>
+                <div class="block">Paid so far: </div>
+                <div class="block">Estimated final cost: </div>
+                <div class="block">Start Date: </div>
+                <div class="block">End Date: </div>
             </div>
-            <div class="column is-2">
-                <div>
-                    <div id="displayBudget">
-                        {{ budget.target }} {{ budget.currency }}
-                        <i class="fas fa-edit" id="budgetEditButton"></i>
+            <div class="column is-1" style="text-align: right;">
+                <div class="block">
+                    <div id="displayBudget" class="columns is-gapless">
+                        <div class = "column">
+                            {{ budget.target }}
+                        </div>
+                        <div class = "column">
+                            {{ budget.currency }}
+                        </div>
+                        <div class = "column">
+                            <span class="icon">
+                                <i class="fas fa-edit" id="budgetEditButton"></i>                                    
+                            </span>
+                        </div> 
                     </div>
                     <div id ="editBudget" class="field has-addons">
-                        <div class = "control">
-                            <input class="input is-small" type="text" placeholder="New budget" id="newBudget">
+                        <div class="control">
+                            <input class="input is-small" type="text" placeholder="{{ budget.target }}" id="newBudget">
                         </div>
                         <div class="control">
                             <span class="select is-small">
@@ -40,12 +49,38 @@
                                 Save
                             </a>
                         </div>
-                    </div>                           
+                    </div>
                 </div>
-                <p>{{ budget.actuals }} {{ budget.currency }}</p>
-                <p>{{ budget.eac }} {{ budget.currency }}</p>
-                <p>{{ budget.startDate }}</p>
-                <p>{{ budget.endDate }}</p>
+                <div class="block" >
+                    <div id="displayActuals" class="columns is-gapless">
+                        <div class = "column">
+                            {{ budget.actuals }}
+                        </div>
+                        <div class = "column">
+                            {{ budget.currency }}
+                        </div>
+                        <div class = "column">
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    <div id="displayEac" class="columns is-gapless">
+                        <div class = "column">
+                            {{ budget.eac }}
+                        </div>
+                        <div class = "column">
+                            {{ budget.currency }}
+                        </div>
+                        <div class = "column">
+                        </div>
+                    </div>
+                </div>
+                <div class="block">
+                    {{ budget.startDate }}
+                </div>
+                <div class="block">
+                    {{ budget.endDate }}
+                </div>
             </div>
         </div>
     </div>
